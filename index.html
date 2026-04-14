@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Doctogrowth — AI Growth Systems for Specialist Doctors</title>
+<title>Doctogrowth — Content Systems for Specialist Doctors</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -37,7 +37,6 @@
 
   .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
 
-  /* ─── NOISE GRAIN ─── */
   body::after {
     content: '';
     position: fixed;
@@ -49,165 +48,97 @@
 
   /* ─── NAV ─── */
   .nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 1000;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
     padding: 1rem var(--gutter);
     backdrop-filter: blur(20px) saturate(1.4);
     background: #050508cc;
     border-bottom: 1px solid var(--border);
   }
   .nav-inner {
-    max-width: var(--max);
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: var(--max); margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
   }
   .logo {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 900;
-    font-size: 1.5rem;
-    letter-spacing: -0.04em;
-    text-decoration: none;
-    color: var(--fg);
+    font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 1.5rem;
+    letter-spacing: -0.04em; text-decoration: none; color: var(--fg);
   }
   .logo i { font-style: normal; color: var(--accent); }
-
   .nav-right { display: flex; align-items: center; gap: 2.5rem; }
   .nav-right a {
-    color: var(--fg-dim);
-    text-decoration: none;
-    font-size: 0.88rem;
-    font-weight: 500;
-    transition: color 0.25s;
+    color: var(--fg-dim); text-decoration: none; font-size: 0.88rem;
+    font-weight: 500; transition: color 0.25s;
   }
   .nav-right a:hover { color: var(--fg); }
 
   .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.7rem 1.6rem;
-    background: var(--accent);
-    color: #fff;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    font-size: 0.88rem;
-    border: none;
-    border-radius: 100px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.3s;
-    letter-spacing: -0.01em;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.7rem 1.6rem; background: var(--accent); color: #fff;
+    font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.88rem;
+    border: none; border-radius: 100px; cursor: pointer; text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.3s; letter-spacing: -0.01em;
   }
   .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 30px var(--accent-glow), 0 0 60px var(--accent-glow);
   }
-
   .btn-ghost {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.7rem 1.6rem;
-    background: transparent;
-    color: var(--fg);
-    font-family: 'Outfit', sans-serif;
-    font-weight: 600;
-    font-size: 0.88rem;
-    border: 1.5px solid var(--border);
-    border-radius: 100px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: border-color 0.3s, background 0.3s;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.7rem 1.6rem; background: transparent; color: var(--fg);
+    font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.88rem;
+    border: 1.5px solid var(--border); border-radius: 100px; cursor: pointer;
+    text-decoration: none; transition: border-color 0.3s, background 0.3s;
   }
   .btn-ghost:hover { border-color: var(--accent); background: var(--accent-glow); }
 
   /* ─── HERO ─── */
   .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10rem var(--gutter) 5rem;
-    position: relative;
+    min-height: 100vh; display: flex; flex-direction: column;
+    justify-content: center; align-items: center; text-align: center;
+    padding: 10rem var(--gutter) 5rem; position: relative;
   }
-
-  .hero-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(100px);
-    pointer-events: none;
-  }
+  .hero-orb { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; }
   .hero-orb-1 {
     width: 600px; height: 600px;
     background: radial-gradient(circle, var(--accent-glow), transparent 70%);
-    top: 5%; left: -15%;
-    animation: float 8s ease-in-out infinite;
+    top: 5%; left: -15%; animation: float 8s ease-in-out infinite;
   }
   .hero-orb-2 {
     width: 400px; height: 400px;
     background: radial-gradient(circle, var(--gold-dim), transparent 70%);
-    bottom: 10%; right: -10%;
-    animation: float 10s ease-in-out infinite reverse;
+    bottom: 10%; right: -10%; animation: float 10s ease-in-out infinite reverse;
   }
-
   @keyframes float {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(30px, -20px); }
+    0%, 100% { transform: translate(0,0); }
+    50% { transform: translate(30px,-20px); }
   }
 
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.5rem 1.25rem;
-    border: 1px solid var(--border);
-    border-radius: 100px;
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--gold);
-    background: var(--gold-dim);
-    margin-bottom: 2.5rem;
+  .hero-guarantee {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    padding: 0.55rem 1.3rem; border: 1px solid #22c55e44;
+    border-radius: 100px; font-size: 0.78rem; font-weight: 700;
+    color: #4ade80; background: #22c55e15; margin-bottom: 2.5rem;
     animation: fadeIn 0.8s ease both;
   }
-  .hero-badge::before { content: '✦'; font-size: 0.7rem; }
+  .hero-guarantee svg { flex-shrink: 0; }
 
   .hero h1 {
     font-family: 'Outfit', sans-serif;
-    font-size: clamp(3rem, 8vw, 6rem);
-    font-weight: 900;
-    line-height: 1.0;
-    letter-spacing: -0.04em;
-    max-width: 850px;
-    animation: fadeIn 0.8s 0.1s ease both;
+    font-size: clamp(3rem, 8vw, 5.8rem);
+    font-weight: 900; line-height: 1.0; letter-spacing: -0.04em;
+    max-width: 900px; animation: fadeIn 0.8s 0.1s ease both;
   }
   .highlight {
     background: linear-gradient(135deg, var(--accent-bright), var(--gold));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   }
-
   .hero-sub {
-    margin-top: 1.5rem;
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    color: var(--fg-dim);
-    max-width: 520px;
-    line-height: 1.7;
+    margin-top: 1.5rem; font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--fg-dim); max-width: 550px; line-height: 1.7;
     animation: fadeIn 0.8s 0.25s ease both;
   }
-
   .hero-ctas {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    animation: fadeIn 0.8s 0.4s ease both;
+    display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;
+    justify-content: center; animation: fadeIn 0.8s 0.4s ease both;
   }
 
   @keyframes fadeIn {
@@ -215,344 +146,186 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* ─── MARQUEE ─── */
-  .marquee-wrap {
-    overflow: hidden;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding: 1.25rem 0;
-    background: var(--bg2);
+  /* ─── PLATFORMS BAR ─── */
+  .platforms-bar {
+    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    background: var(--bg2); padding: 2.5rem 0;
   }
-  .marquee-track {
-    display: flex;
-    width: max-content;
-    animation: scroll 25s linear infinite;
+  .platforms-inner {
+    display: flex; align-items: center; justify-content: center;
+    gap: 3rem; flex-wrap: wrap;
   }
-  .marquee-track span {
-    font-family: 'Outfit', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--fg-dim);
-    white-space: nowrap;
-    padding: 0 2.5rem;
+  .platforms-label {
+    font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.15em; color: var(--fg-dim); white-space: nowrap;
   }
-  .marquee-track span::before {
-    content: '◆';
-    margin-right: 2.5rem;
-    color: var(--accent);
-    font-size: 0.6rem;
-    vertical-align: middle;
+  .platform-logos {
+    display: flex; align-items: center; gap: 2.25rem; flex-wrap: wrap;
+    justify-content: center;
   }
-
-  @keyframes scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+  .platform-logos svg {
+    opacity: 0.55; transition: opacity 0.3s;
   }
+  .platform-logos svg:hover { opacity: 1; }
 
   /* ─── SECTIONS SHARED ─── */
   section { padding: 6rem 0; }
   .section-eyebrow {
-    font-family: 'Outfit', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--accent);
+    font-family: 'Outfit', sans-serif; font-size: 0.72rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent);
     margin-bottom: 1rem;
   }
   .section-heading {
     font-family: 'Outfit', sans-serif;
-    font-size: clamp(2rem, 4.5vw, 3.2rem);
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    max-width: 650px;
-    margin-bottom: 1rem;
+    font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 800;
+    line-height: 1.1; letter-spacing: -0.03em; max-width: 700px; margin-bottom: 1rem;
   }
   .section-desc {
-    color: var(--fg-dim);
-    font-size: 1.05rem;
-    max-width: 520px;
-    line-height: 1.7;
-    margin-bottom: 3.5rem;
+    color: var(--fg-dim); font-size: 1.05rem; max-width: 560px;
+    line-height: 1.7; margin-bottom: 3.5rem;
   }
 
-  /* ─── SERVICES ─── */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+  /* ─── GUARANTEE SECTION ─── */
+  .guarantee-section {
+    background: var(--bg2); border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
   }
-  .service-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 2.5rem 2rem;
-    transition: all 0.35s ease;
-    position: relative;
+  .guarantee-card {
+    max-width: 800px; margin: 0 auto; text-align: center;
+    background: var(--card); border: 1.5px solid #22c55e33;
+    border-radius: var(--radius); padding: 4rem 3rem; position: relative;
     overflow: hidden;
   }
-  .service-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-6px);
-    box-shadow: 0 12px 40px #4f7eff15;
+  .guarantee-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: linear-gradient(90deg, #22c55e, #4ade80, #22c55e);
   }
-  .service-card .card-num {
-    font-family: 'Outfit', sans-serif;
-    font-size: 4rem;
-    font-weight: 900;
-    color: #ffffff06;
-    position: absolute;
-    top: -0.2rem;
-    right: 1rem;
-    line-height: 1;
+  .guarantee-shield {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: #22c55e15; border: 1px solid #22c55e33;
+    display: grid; place-items: center; margin: 0 auto 1.5rem;
   }
-  .service-card .icon-wrap {
-    width: 50px; height: 50px;
-    border-radius: 14px;
-    background: linear-gradient(135deg, var(--accent-glow), transparent);
-    border: 1px solid #4f7eff33;
-    display: grid;
-    place-items: center;
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
+  .guarantee-card h2 {
+    font-family: 'Outfit', sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem;
   }
-  .service-card h3 {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    font-size: 1.15rem;
-    margin-bottom: 0.7rem;
-  }
-  .service-card p {
-    color: var(--fg-dim);
-    font-size: 0.88rem;
-    line-height: 1.7;
+  .guarantee-card p {
+    color: var(--fg-dim); font-size: 1.05rem; line-height: 1.75;
+    max-width: 580px; margin: 0 auto 2rem;
   }
 
-  /* ─── RESULTS BANNER ─── */
-  .results-bar {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border-radius: var(--radius);
-    overflow: hidden;
-    margin-top: 4rem;
+  /* ─── RESULTS ─── */
+  .results-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem;
   }
-  .results-bar .r-item {
-    background: var(--card);
-    padding: 2.25rem 1.5rem;
-    text-align: center;
+  .result-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 2.5rem; transition: border-color 0.3s;
   }
-  .r-item .r-num {
-    font-family: 'Outfit', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: var(--fg);
-    letter-spacing: -0.03em;
+  .result-card:hover { border-color: #ffffff22; }
+  .result-metric {
+    font-family: 'Outfit', sans-serif; font-size: 2.5rem; font-weight: 900;
+    letter-spacing: -0.03em; margin-bottom: 0.25rem;
   }
-  .r-item .r-num span { color: var(--gold); }
-  .r-item .r-label {
-    font-size: 0.8rem;
-    color: var(--fg-dim);
-    margin-top: 0.25rem;
+  .result-metric .gold { color: var(--gold); }
+  .result-metric .blue { color: var(--accent-bright); }
+  .result-label {
+    font-size: 0.85rem; color: var(--fg-dim); margin-bottom: 1.25rem;
   }
-
-  /* ─── HOW IT WORKS ─── */
-  .how-section { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-  .how-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    position: relative;
+  .result-card blockquote {
+    font-size: 0.95rem; line-height: 1.7; color: var(--fg);
+    font-style: italic; margin-bottom: 1.25rem;
+    border-left: 2px solid var(--border); padding-left: 1rem;
   }
-  .how-grid::before {
-    content: '';
-    position: absolute;
-    top: 35px;
-    left: 8%;
-    right: 8%;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent), var(--gold), var(--accent));
-    opacity: 0.15;
-  }
-  .how-step { position: relative; z-index: 1; }
-  .how-num {
-    width: 44px; height: 44px;
-    border-radius: 50%;
-    background: var(--accent);
-    color: #fff;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 800;
-    font-size: 1rem;
-    display: grid;
-    place-items: center;
-    margin-bottom: 1.25rem;
-    box-shadow: 0 0 20px var(--accent-glow);
-  }
-  .how-step h3 {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    font-size: 1.05rem;
-    margin-bottom: 0.5rem;
-  }
-  .how-step p {
-    color: var(--fg-dim);
-    font-size: 0.85rem;
-    line-height: 1.65;
-  }
-
-  /* ─── TESTIMONIALS ─── */
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-  }
-  .test-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 2.5rem;
-    transition: border-color 0.3s;
-  }
-  .test-card:hover { border-color: #ffffff22; }
-  .test-stars { color: var(--gold); font-size: 0.85rem; margin-bottom: 1rem; letter-spacing: 2px; }
-  .test-card blockquote {
-    font-size: 1rem;
-    line-height: 1.75;
-    color: var(--fg);
-    font-style: italic;
-    margin-bottom: 1.5rem;
-  }
-  .test-author {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  .test-avatar {
-    width: 40px; height: 40px;
-    border-radius: 50%;
+  .result-author { display: flex; align-items: center; gap: 0.75rem; }
+  .result-avatar {
+    width: 38px; height: 38px; border-radius: 50%;
     background: linear-gradient(135deg, var(--accent), var(--gold));
-    display: grid;
-    place-items: center;
-    font-weight: 800;
-    font-size: 0.85rem;
-    color: var(--bg);
+    display: grid; place-items: center; font-weight: 800;
+    font-size: 0.8rem; color: var(--bg);
   }
-  .test-author-info strong {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 700;
+  .result-author-info strong { display: block; font-size: 0.88rem; font-weight: 700; }
+  .result-author-info span { font-size: 0.75rem; color: var(--fg-dim); }
+
+  /* ─── WHAT WE HANDLE ─── */
+  .handle-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
   }
-  .test-author-info span {
-    font-size: 0.78rem;
-    color: var(--fg-dim);
+  .handle-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 2.25rem 2rem;
+    transition: all 0.35s ease;
   }
+  .handle-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+  .handle-card .h-icon {
+    width: 46px; height: 46px; border-radius: 12px;
+    background: linear-gradient(135deg, var(--accent-glow), transparent);
+    border: 1px solid #4f7eff33; display: grid; place-items: center;
+    font-size: 1.2rem; margin-bottom: 1.25rem;
+  }
+  .handle-card h3 {
+    font-family: 'Outfit', sans-serif; font-weight: 700;
+    font-size: 1.05rem; margin-bottom: 0.5rem;
+  }
+  .handle-card p { color: var(--fg-dim); font-size: 0.85rem; line-height: 1.7; }
 
   /* ─── FAQ ─── */
   .faq-list { max-width: 700px; }
-  .faq-item {
-    border-bottom: 1px solid var(--border);
-    padding: 1.5rem 0;
-    cursor: pointer;
-  }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 1.5rem 0; cursor: pointer; }
   .faq-q {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 600;
-    font-size: 1.05rem;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 1.05rem;
   }
   .faq-q::after {
-    content: '+';
-    font-size: 1.4rem;
-    color: var(--accent);
-    transition: transform 0.3s;
-    flex-shrink: 0;
+    content: '+'; font-size: 1.4rem; color: var(--accent);
+    transition: transform 0.3s; flex-shrink: 0;
   }
   .faq-item.open .faq-q::after { transform: rotate(45deg); }
   .faq-a {
-    max-height: 0;
-    overflow: hidden;
+    max-height: 0; overflow: hidden;
     transition: max-height 0.4s ease, padding 0.4s ease;
-    color: var(--fg-dim);
-    font-size: 0.9rem;
-    line-height: 1.7;
+    color: var(--fg-dim); font-size: 0.9rem; line-height: 1.7;
   }
-  .faq-item.open .faq-a {
-    max-height: 200px;
-    padding-top: 1rem;
-  }
+  .faq-item.open .faq-a { max-height: 250px; padding-top: 1rem; }
 
   /* ─── CTA ─── */
   .cta-section {
-    text-align: center;
-    padding: 7rem 0;
-    position: relative;
-    overflow: hidden;
+    text-align: center; padding: 7rem 0;
+    position: relative; overflow: hidden;
   }
   .cta-glow {
-    position: absolute;
-    width: 700px; height: 700px;
-    border-radius: 50%;
+    position: absolute; width: 700px; height: 700px; border-radius: 50%;
     background: radial-gradient(circle, var(--accent-glow), transparent 65%);
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    filter: blur(80px);
-    pointer-events: none;
+    top: 50%; left: 50%; transform: translate(-50%,-50%);
+    filter: blur(80px); pointer-events: none;
   }
   .cta-section h2 {
     font-family: 'Outfit', sans-serif;
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    line-height: 1.05;
-    position: relative;
+    font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900;
+    letter-spacing: -0.04em; line-height: 1.05; position: relative;
     margin-bottom: 1rem;
   }
   .cta-section .cta-sub {
-    color: var(--fg-dim);
-    font-size: 1.1rem;
-    max-width: 480px;
-    margin: 0 auto 2.5rem;
-    line-height: 1.7;
-    position: relative;
+    color: var(--fg-dim); font-size: 1.1rem; max-width: 500px;
+    margin: 0 auto 2.5rem; line-height: 1.7; position: relative;
   }
 
   /* ─── FOOTER ─── */
-  .footer {
-    border-top: 1px solid var(--border);
-    padding: 3rem 0;
-  }
+  .footer { border-top: 1px solid var(--border); padding: 3rem 0; }
   .footer-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem;
   }
-  .footer-copy {
-    font-size: 0.8rem;
-    color: var(--fg-dim);
-  }
+  .footer-copy { font-size: 0.8rem; color: var(--fg-dim); }
   .footer-links { display: flex; gap: 2rem; }
   .footer-links a {
-    font-size: 0.8rem;
-    color: var(--fg-dim);
-    text-decoration: none;
+    font-size: 0.8rem; color: var(--fg-dim); text-decoration: none;
     transition: color 0.25s;
   }
   .footer-links a:hover { color: var(--fg); }
 
   /* ─── SCROLL REVEAL ─── */
-  .sr {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.65s ease, transform 0.65s ease;
-  }
+  .sr { opacity: 0; transform: translateY(30px); transition: opacity 0.65s ease, transform 0.65s ease; }
   .sr.vis { opacity: 1; transform: none; }
   .sr-d1 { transition-delay: 0.1s; }
   .sr-d2 { transition-delay: 0.2s; }
@@ -561,203 +334,134 @@
 
   /* ─── MOBILE ─── */
   @media (max-width: 900px) {
-    .services-grid { grid-template-columns: 1fr; }
-    .how-grid { grid-template-columns: repeat(2, 1fr); }
-    .how-grid::before { display: none; }
-    .testimonials-grid { grid-template-columns: 1fr; }
-    .results-bar { grid-template-columns: repeat(2, 1fr); }
+    .results-grid { grid-template-columns: 1fr; }
+    .handle-grid { grid-template-columns: 1fr; }
+    .platform-logos { gap: 1.5rem; }
   }
   @media (max-width: 600px) {
     .nav-right a:not(.btn-primary) { display: none; }
-    .how-grid { grid-template-columns: 1fr; }
-    .results-bar { grid-template-columns: 1fr; }
     .hero h1 { font-size: clamp(2.4rem, 10vw, 3.5rem); }
+    .guarantee-card { padding: 2.5rem 1.5rem; }
+    .platforms-inner { flex-direction: column; gap: 1.5rem; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ━━━ NAV ━━━ -->
 <header class="nav">
   <div class="nav-inner">
     <a href="#" class="logo">docto<i>growth</i></a>
     <div class="nav-right">
+      <a href="#results">Results</a>
       <a href="#services">Services</a>
-      <a href="#how">Process</a>
-      <a href="#testimonials">Results</a>
+      <a href="#guarantee">Guarantee</a>
       <a href="#faq">FAQ</a>
-      <a href="#cta" class="btn-primary">Book a Call ↗</a>
+      <a href="https://calendly.com/anurajsharma/free-strategy-call" target="_blank" class="btn-primary">Book a Call ↗</a>
     </div>
   </div>
 </header>
 
-<!-- HERO -->
+<!-- ━━━ HERO ━━━ -->
 <section class="hero">
   <div class="hero-orb hero-orb-1"></div>
   <div class="hero-orb hero-orb-2"></div>
-  <div class="hero-badge">Built exclusively for specialist doctors</div>
-  <h1>Your practice deserves a <span class="highlight">growth engine</span></h1>
-  <p class="hero-sub">We build AI-powered content systems, patient acquisition funnels, and automations that fill your calendar — so you can focus on medicine.</p>
+
+  <div class="hero-guarantee">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 0L9.8 5.2L15.6 5.2L10.9 8.8L12.7 14L8 10.4L3.3 14L5.1 8.8L0.4 5.2L6.2 5.2L8 0Z" fill="#4ade80"/></svg>
+    100% Performance Guarantee — Results or your money back
+  </div>
+
+  <h1>We turn specialist doctors into <span class="highlight">industry authorities</span></h1>
+  <p class="hero-sub">You record once a month. We handle the editing, copywriting, and distribution across every platform — and guarantee the results.</p>
+
   <div class="hero-ctas">
-    <a href="#cta" class="btn-primary" style="padding: 0.85rem 2rem; font-size: 0.95rem;">Book a Free Strategy Call →</a>
-    <a href="#services" class="btn-ghost">Explore Services</a>
+    <a href="https://calendly.com/anurajsharma/free-strategy-call" target="_blank" class="btn-primary" style="padding: 0.85rem 2rem; font-size: 0.95rem;">Book a Free Strategy Call →</a>
+    <a href="#results" class="btn-ghost">See Client Results</a>
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee-wrap">
-  <div class="marquee-track">
-    <span>Dermatology</span><span>Cardiology</span><span>Orthopedics</span><span>Ophthalmology</span><span>ENT Specialists</span><span>Plastic Surgery</span><span>Gastroenterology</span><span>Endocrinology</span><span>Neurology</span><span>Urology</span>
-    <span>Dermatology</span><span>Cardiology</span><span>Orthopedics</span><span>Ophthalmology</span><span>ENT Specialists</span><span>Plastic Surgery</span><span>Gastroenterology</span><span>Endocrinology</span><span>Neurology</span><span>Urology</span>
+<!-- ━━━ PLATFORMS BAR ━━━ -->
+<div class="platforms-bar">
+  <div class="container">
+    <div class="platforms-inner">
+      <span class="platforms-label">We distribute across</span>
+      <div class="platform-logos">
+        <!-- YouTube -->
+        <svg width="32" height="23" viewBox="0 0 159 110" fill="none"><path d="M154 17.5C152.2 10.7 147 6.5 140.4 5.3C128 2.5 80 2.5 80 2.5S31.9 2.5 19.6 5.3C13 6.5 7.8 10.7 6 17.5C3.2 29.8 3.2 55 3.2 55S3.2 80.2 6 92.5C7.8 99.3 13 103.5 19.6 104.7C31.9 107.5 80 107.5 80 107.5S128 107.5 140.4 104.7C147 103.5 152.2 99.3 154 92.5C156.8 80.2 156.8 55 156.8 55S156.8 29.8 154 17.5Z" fill="#FF0000"/><path d="M64 78.7V35.3L104 57L64 78.7Z" fill="#FFF"/></svg>
+        <!-- Instagram -->
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><defs><radialGradient id="ig1" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="5%" stop-color="#fdf497"/><stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/><stop offset="90%" stop-color="#285AEB"/></radialGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" fill="url(#ig1)"/><circle cx="12" cy="12" r="4.5" stroke="#fff" stroke-width="1.5" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff"/><rect x="2" y="2" width="20" height="20" rx="5" stroke="#fff" stroke-width="1.2" fill="none"/></svg>
+        <!-- TikTok -->
+        <svg width="22" height="26" viewBox="0 0 448 512" fill="none"><path d="M448 209.9a210.1 210.1 0 01-122.8-39.3v178.8A162.6 162.6 0 11185 188.3v89.9a74.6 74.6 0 1052.2 71.2V0h88a121 121 0 00122.8 121v88.9z" fill="#fff"/></svg>
+        <!-- LinkedIn -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="3" fill="#0A66C2"/><path d="M6.9 10.2h2.4v7.7H6.9v-7.7zM8.1 6.1a1.4 1.4 0 110 2.8 1.4 1.4 0 010-2.8zM11 10.2h2.3v1.1h0a2.5 2.5 0 012.3-1.3c2.4 0 2.9 1.6 2.9 3.7v4.2h-2.4v-3.7c0-.9 0-2-1.2-2s-1.4 1-1.4 2v3.7H11v-7.7z" fill="#fff"/></svg>
+        <!-- X / Twitter -->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="#fff"/></svg>
+        <!-- Facebook -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="5" fill="#1877F2"/><path d="M16.7 15.2l.5-3.2h-3.1v-2.1c0-.9.4-1.7 1.8-1.7h1.4V5.4s-1.3-.2-2.5-.2c-2.5 0-4.2 1.5-4.2 4.3V12H7.8v3.2h2.8v7.7h3.5v-7.7h2.6z" fill="#fff"/></svg>
+        <!-- Blog/SEO -->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#fff" stroke-width="1.5" fill="none"/><path d="M7 8h10M7 12h7M7 16h4" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <!-- Email -->
+        <svg width="24" height="18" viewBox="0 0 24 18" fill="none"><rect x="1" y="1" width="22" height="16" rx="3" stroke="#fff" stroke-width="1.5" fill="none"/><path d="M1 1l11 8 11-8" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- SERVICES -->
-<section id="services">
+<!-- ━━━ RESULTS ━━━ -->
+<section id="results">
   <div class="container">
-    <div class="section-eyebrow sr">What We Build</div>
-    <h2 class="section-heading sr">End-to-end growth infrastructure for medical specialists</h2>
-    <p class="section-desc sr">We don't do generic marketing. Every system is engineered for the way specialist practices actually work — referrals, consultations, and trust.</p>
+    <div class="section-eyebrow sr">Proven Results</div>
+    <h2 class="section-heading sr">We don't promise followers. We deliver patients.</h2>
+    <p class="section-desc sr">Every engagement is measured by what actually matters — enquiries, consultations booked, and revenue generated.</p>
 
-    <div class="services-grid">
-      <div class="service-card sr sr-d1">
-        <div class="card-num">01</div>
-        <div class="icon-wrap">🔥</div>
-        <h3>Patient Acquisition Funnels</h3>
-        <p>High-converting landing pages and ad campaigns designed around your specialty. We bring qualified patients — not just traffic.</p>
-      </div>
-      <div class="service-card sr sr-d2">
-        <div class="card-num">02</div>
-        <div class="icon-wrap">⚡</div>
-        <h3>AI Automation & CRM</h3>
-        <p>Automated appointment booking, smart follow-up sequences, lead scoring, and pipeline management that runs 24/7.</p>
-      </div>
-      <div class="service-card sr sr-d3">
-        <div class="card-num">03</div>
-        <div class="icon-wrap">🎬</div>
-        <h3>Authority Content</h3>
-        <p>Social media strategy, medical content creation, video scripts, and blog posts that position you as the go-to expert.</p>
-      </div>
-      <div class="service-card sr sr-d1">
-        <div class="card-num">04</div>
-        <div class="icon-wrap">🌐</div>
-        <h3>Website & SEO</h3>
-        <p>Conversion-optimised websites and local SEO that makes you the first result when patients search for your specialty.</p>
-      </div>
-      <div class="service-card sr sr-d2">
-        <div class="card-num">05</div>
-        <div class="icon-wrap">📊</div>
-        <h3>Analytics & Reporting</h3>
-        <p>Clear dashboards tracking patient acquisition cost, conversion rates, and ROI. Know exactly what's working.</p>
-      </div>
-      <div class="service-card sr sr-d3">
-        <div class="card-num">06</div>
-        <div class="icon-wrap">🤝</div>
-        <h3>Reputation Management</h3>
-        <p>Automated review requests, response management, and online reputation building across Google, Healthgrades, and more.</p>
-      </div>
-    </div>
-
-    <div class="results-bar sr">
-      <div class="r-item">
-        <div class="r-num">3<span>x</span></div>
-        <div class="r-label">Patient Enquiry Growth</div>
-      </div>
-      <div class="r-item">
-        <div class="r-num">80<span>%</span></div>
-        <div class="r-label">Admin Time Saved</div>
-      </div>
-      <div class="r-item">
-        <div class="r-num">24<span>/7</span></div>
-        <div class="r-label">Automated Follow-ups</div>
-      </div>
-      <div class="r-item">
-        <div class="r-num">90<span>d</span></div>
-        <div class="r-label">Average Time to Full Pipeline</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section id="how" class="how-section">
-  <div class="container">
-    <div class="section-eyebrow sr">Our Process</div>
-    <h2 class="section-heading sr">From first call to full pipeline</h2>
-    <p class="section-desc sr">A proven 4-step system that takes the guesswork out of growing your practice.</p>
-
-    <div class="how-grid">
-      <div class="how-step sr sr-d1">
-        <div class="how-num">1</div>
-        <h3>Discovery Call</h3>
-        <p>We audit your online presence, understand your specialty, and identify the biggest growth opportunities.</p>
-      </div>
-      <div class="how-step sr sr-d2">
-        <div class="how-num">2</div>
-        <h3>Strategy & Design</h3>
-        <p>Custom growth plan with funnels, content calendar, and automation map tailored to your practice.</p>
-      </div>
-      <div class="how-step sr sr-d3">
-        <div class="how-num">3</div>
-        <h3>Build & Launch</h3>
-        <p>We build everything — funnels, CRM, content, ads — and launch your systems within 30 days.</p>
-      </div>
-      <div class="how-step sr sr-d4">
-        <div class="how-num">4</div>
-        <h3>Scale & Optimise</h3>
-        <p>Ongoing optimisation, A/B testing, and monthly reporting to continuously increase patient flow.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="container">
-    <div class="section-eyebrow sr">Client Results</div>
-    <h2 class="section-heading sr">Doctors trust us with their growth</h2>
-    <p class="section-desc sr">Real results from real practices. Here's what our clients have to say.</p>
-
-    <div class="testimonials-grid">
-      <div class="test-card sr sr-d1">
-        <div class="test-stars">★★★★★</div>
-        <blockquote>"Within 60 days, my consultation bookings tripled. The automation they set up means I barely touch my CRM anymore — it just works."</blockquote>
-        <div class="test-author">
-          <div class="test-avatar">SM</div>
-          <div class="test-author-info">
+    <div class="results-grid">
+      <div class="result-card sr sr-d1">
+        <div class="result-metric">3<span class="gold">x</span> Enquiries</div>
+        <div class="result-label">Within the first 90 days</div>
+        <blockquote>"I went from maybe 2 enquiries a week to getting messages daily. Patients tell me they found me on Instagram or YouTube — that never happened before."</blockquote>
+        <div class="result-author">
+          <div class="result-avatar">SM</div>
+          <div class="result-author-info">
             <strong>Dr. Sarah Mitchell</strong>
             <span>Consultant Dermatologist · London, UK</span>
           </div>
         </div>
       </div>
-      <div class="test-card sr sr-d2">
-        <div class="test-stars">★★★★★</div>
-        <blockquote>"Doctogrowth understands the medical space. They don't just run ads — they built an entire patient journey that feels clinical and trustworthy."</blockquote>
-        <div class="test-author">
-          <div class="test-avatar">RP</div>
-          <div class="test-author-info">
-            <strong>Dr. Raj Patel</strong>
-            <span>Orthopedic Surgeon · Houston, TX</span>
-          </div>
-        </div>
-      </div>
-      <div class="test-card sr sr-d1">
-        <div class="test-stars">★★★★★</div>
-        <blockquote>"The content strategy alone was worth it. My Instagram went from 800 to 12K followers in 4 months — all qualified local patients."</blockquote>
-        <div class="test-author">
-          <div class="test-avatar">AK</div>
-          <div class="test-author-info">
+
+      <div class="result-card sr sr-d2">
+        <div class="result-metric">12<span class="blue">K</span> Followers</div>
+        <div class="result-label">From 800 in 4 months — all local patients</div>
+        <blockquote>"The content feels medical and trustworthy. My patients actually reference my videos during consultations. It's built a level of trust before they even walk through the door."</blockquote>
+        <div class="result-author">
+          <div class="result-avatar">AK</div>
+          <div class="result-author-info">
             <strong>Dr. Amira Khan</strong>
             <span>Aesthetic Medicine · Dubai, UAE</span>
           </div>
         </div>
       </div>
-      <div class="test-card sr sr-d2">
-        <div class="test-stars">★★★★★</div>
-        <blockquote>"Best investment I've made for my practice. Professional, responsive, and they actually deliver on their promises."</blockquote>
-        <div class="test-author">
-          <div class="test-avatar">JC</div>
-          <div class="test-author-info">
+
+      <div class="result-card sr sr-d1">
+        <div class="result-metric">£40<span class="gold">K</span>/mo</div>
+        <div class="result-label">Additional revenue attributed to content</div>
+        <blockquote>"The ROI speaks for itself. I record for 2 hours a month and they handle absolutely everything. Best investment I've made for my practice."</blockquote>
+        <div class="result-author">
+          <div class="result-avatar">RP</div>
+          <div class="result-author-info">
+            <strong>Dr. Raj Patel</strong>
+            <span>Orthopedic Surgeon · Houston, TX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-card sr sr-d2">
+        <div class="result-metric">2<span class="blue">hrs</span>/month</div>
+        <div class="result-label">That's all the time it takes from you</div>
+        <blockquote>"I used to spend hours trying to post on social media myself. Now I just talk to a camera once a month and they handle everything. Complete game changer."</blockquote>
+        <div class="result-author">
+          <div class="result-avatar">JC</div>
+          <div class="result-author-info">
             <strong>Dr. James Clarke</strong>
             <span>Cardiologist · Manchester, UK</span>
           </div>
@@ -767,7 +471,63 @@
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- ━━━ GUARANTEE ━━━ -->
+<section id="guarantee" class="guarantee-section">
+  <div class="container">
+    <div class="guarantee-card sr">
+      <div class="guarantee-shield">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v5c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V7l-9-5z" fill="#22c55e33" stroke="#4ade80" stroke-width="1.5"/><path d="M9 12l2 2 4-4" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h2>100% Performance Guarantee</h2>
+      <p>We guarantee your content will hit agreed-upon views and engagement targets within the first 90 days. If we don't deliver, we either continue working for free until we do — or refund your investment in full. No questions asked.</p>
+      <p style="color: var(--fg); font-weight: 600; font-size: 0.95rem; margin-bottom: 0;">Zero risk. Full accountability. That's how confident we are.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━ WHAT WE HANDLE ━━━ -->
+<section id="services">
+  <div class="container">
+    <div class="section-eyebrow sr">What We Handle</div>
+    <h2 class="section-heading sr">You show up once. We do everything else.</h2>
+    <p class="section-desc sr">From raw recording to published content across every channel — editing, writing, design, and distribution is all on us.</p>
+
+    <div class="handle-grid">
+      <div class="handle-card sr sr-d1">
+        <div class="h-icon">✂️</div>
+        <h3>Video Editing</h3>
+        <p>Long-form for YouTube, short-form for Reels, TikTok, and Shorts. Thumbnails, captions, and hooks — all included.</p>
+      </div>
+      <div class="handle-card sr sr-d2">
+        <div class="h-icon">✍️</div>
+        <h3>Copywriting</h3>
+        <p>Platform-native captions, LinkedIn posts, X threads, blog articles, and email newsletters — all in your voice.</p>
+      </div>
+      <div class="handle-card sr sr-d3">
+        <div class="h-icon">📡</div>
+        <h3>Distribution</h3>
+        <p>Scheduled and published across every channel. Optimised for each platform's algorithm and your target audience.</p>
+      </div>
+      <div class="handle-card sr sr-d1">
+        <div class="h-icon">🎨</div>
+        <h3>Design & Branding</h3>
+        <p>Thumbnails, carousels, graphics, and templates — all on-brand and designed to stop the scroll.</p>
+      </div>
+      <div class="handle-card sr sr-d2">
+        <div class="h-icon">📊</div>
+        <h3>Analytics & Reporting</h3>
+        <p>Monthly performance reports tracking what matters — views, engagement, enquiries, and growth trends.</p>
+      </div>
+      <div class="handle-card sr sr-d3">
+        <div class="h-icon">🚀</div>
+        <h3>Growth Strategy</h3>
+        <p>Content calendar, topic research, trend spotting, and ongoing optimisation — we're your strategic partner, not just editors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━ FAQ ━━━ -->
 <section id="faq" style="border-top: 1px solid var(--border);">
   <div class="container">
     <div class="section-eyebrow sr">FAQ</div>
@@ -775,41 +535,49 @@
 
     <div class="faq-list sr">
       <div class="faq-item">
+        <div class="faq-q">What does "results guaranteed" actually mean?</div>
+        <div class="faq-a">Before we start, we agree on specific performance targets — views, engagement, enquiry growth. If we don't hit those targets within the first 90 days, we either keep working for free until we do, or refund your money in full. We put our fees on the line because we know the system works.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How much time does this take from me?</div>
+        <div class="faq-a">About 1–2 hours per month. We send you topics and talking points ahead of time. You show up, talk through them on camera, and we handle everything else — editing, writing, design, publishing.</div>
+      </div>
+      <div class="faq-item">
         <div class="faq-q">Do you only work with doctors?</div>
-        <div class="faq-a">Yes. We specialise exclusively in specialist medical practices — dermatologists, cardiologists, surgeons, and other consultants in the UK, US, and Middle East.</div>
+        <div class="faq-a">Yes. We specialise exclusively in specialist medical practitioners — dermatologists, cardiologists, surgeons, and other consultants in the UK, US, and Middle East.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">How long before I see results?</div>
-        <div class="faq-a">Most practices see a noticeable increase in enquiries within 30–60 days. A fully-loaded pipeline typically takes around 90 days.</div>
+        <div class="faq-q">Can I approve content before it goes live?</div>
+        <div class="faq-a">Absolutely. You get full approval on everything before it's published. We use a simple review system — usually takes about 5 minutes to review and approve.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Is everything HIPAA & GDPR compliant?</div>
-        <div class="faq-a">Absolutely. Compliance is non-negotiable. All systems, data handling, and content are built with healthcare regulations in mind from day one.</div>
+        <div class="faq-q">What platforms do you cover?</div>
+        <div class="faq-a">YouTube, Instagram, TikTok, LinkedIn, X/Twitter, Facebook, blog/SEO, email newsletters, and podcast clips. We go wherever your patients are.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">What does a typical engagement cost?</div>
-        <div class="faq-a">It depends on the scope, but most packages start from £2,000/month. We'll give you a detailed quote on the strategy call — no pressure, no surprises.</div>
+        <div class="faq-q">Do you offer services beyond content?</div>
+        <div class="faq-a">Yes — we also build patient acquisition funnels, AI automation systems, CRM setups, and conversion-optimised websites. These can be discussed on your strategy call.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">Can I cancel anytime?</div>
-        <div class="faq-a">We don't lock you into long contracts. After the initial 90-day build phase, you can adjust or cancel with 30 days notice.</div>
+        <div class="faq-q">Is the content HIPAA & GDPR compliant?</div>
+        <div class="faq-a">Non-negotiable. All content is reviewed for medical accuracy and regulatory compliance before publishing. We understand the stakes in healthcare.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section id="cta" class="cta-section">
+<!-- ━━━ CTA ━━━ -->
+<section class="cta-section">
   <div class="cta-glow"></div>
   <div class="container" style="position: relative;">
-    <div class="section-eyebrow sr">Let's Talk</div>
-    <h2 class="sr">Ready to fill your <span class="highlight">calendar</span>?</h2>
-    <p class="cta-sub sr">Book a free 30-minute strategy call. We'll audit your online presence and show you exactly how to grow — no strings attached.</p>
-    <a href="#" class="btn-primary sr" style="padding: 1rem 2.5rem; font-size: 1rem;">Book Your Free Strategy Call →</a>
+    <div class="section-eyebrow sr">Zero Risk. Guaranteed Results.</div>
+    <h2 class="sr">Ready to become the <span class="highlight">go-to doctor</span> in your city?</h2>
+    <p class="cta-sub sr">Book a free 30-minute strategy call. We'll show you exactly how we'd grow your practice — and back it with our guarantee.</p>
+    <a href="https://calendly.com/anurajsharma/free-strategy-call" target="_blank" class="btn-primary sr" style="padding: 1rem 2.5rem; font-size: 1rem;">Book Your Free Strategy Call →</a>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ━━━ FOOTER ━━━ -->
 <footer class="footer">
   <div class="container">
     <div class="footer-inner">
@@ -824,7 +592,6 @@
 </footer>
 
 <script>
-// Scroll reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('vis'); observer.unobserve(e.target); }
@@ -832,7 +599,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.sr').forEach(el => observer.observe(el));
 
-// FAQ toggle
 document.querySelectorAll('.faq-item').forEach(item => {
   item.querySelector('.faq-q').addEventListener('click', () => {
     const wasOpen = item.classList.contains('open');
