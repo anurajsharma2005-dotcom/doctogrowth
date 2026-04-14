@@ -326,8 +326,8 @@
   .footer-links a:hover { color: var(--fg); }
 
   /* ─── SCROLL REVEAL ─── */
-  .sr { opacity: 0; transform: translateY(30px); transition: opacity 0.65s ease, transform 0.65s ease; }
-  .sr.vis { opacity: 1; transform: none; }
+  body.js-ready .sr { opacity: 0; transform: translateY(30px); transition: opacity 0.65s ease, transform 0.65s ease; }
+  body.js-ready .sr.vis { opacity: 1; transform: none; }
   .sr-d1 { transition-delay: 0.1s; }
   .sr-d2 { transition-delay: 0.2s; }
   .sr-d3 { transition-delay: 0.3s; }
@@ -445,19 +445,6 @@
           <div class="result-author-info">
             <strong>Dr. Amira Khan</strong>
             <span>Aesthetic Medicine · Dubai, UAE</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="result-card sr sr-d1">
-        <div class="result-metric">£40<span class="gold">K</span>/mo</div>
-        <div class="result-label">Additional revenue attributed to content</div>
-        <blockquote>"The ROI speaks for itself. I record for 2 hours a month and they handle absolutely everything. Best investment I've made for my practice."</blockquote>
-        <div class="result-author">
-          <div class="result-avatar">RP</div>
-          <div class="result-author-info">
-            <strong>Dr. Raj Patel</strong>
-            <span>Orthopedic Surgeon · Houston, TX</span>
           </div>
         </div>
       </div>
@@ -592,19 +579,35 @@
       <div class="footer-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms</a>
-        <a href="/cdn-cgi/l/email-protection#5038353c3c3f10343f33243f37223f2724387e333f3d"><span class="__cf_email__" data-cfemail="761e131a1a1936121915021911041901021e5815191b">[email&#160;protected]</span></a>
+        <a href="mailto:hello&#64;doctogrowth.com">hello&#64;doctogrowth.com</a>
       </div>
     </div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('vis'); observer.unobserve(e.target); }
-  });
-}, { threshold: 0.12 });
-document.querySelectorAll('.sr').forEach(el => observer.observe(el));
+<script>
+document.body.classList.add('js-ready');
 
-document.querySelectorAll('.faq-item').forEach(item => {
-  item.querySelector('.faq-q').addEven
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      e.target.classList.add('vis');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.sr').forEach(function(el) {
+  observer.observe(el);
+});
+
+document.querySelectorAll('.faq-item').forEach(function(item) {
+  item.querySelector('.faq-q').addEventListener('click', function() {
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
