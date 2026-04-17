@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sethi Dental Care Center — Trusted Dental Care in Madangir, New Delhi</title>
+<meta name="description" content="Sethi Dental Care Center offers comprehensive dental care including RCT, crowns, orthodontics, and cosmetic dentistry in Madangir, New Delhi. Open 7 days a week.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #0b2545;
+  --navy-deep: #061832;
+  --teal: #13856b;
+  --teal-bright: #1ca98a;
+  --mint: #e6f4ef;
+  --cream: #fbf8f3;
+  --ivory: #fefcf8;
+  --gold: #c9a24a;
+  --ink: #0f1b2d;
+  --muted: #5a6b80;
+  --line: #e7dfd3;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--ivory);
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.serif { font-family: 'Fraunces', serif; font-weight: 500; letter-spacing: -0.01em; }
+
+/* ---------- NAVIGATION ---------- */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 20px 5%;
+  background: rgba(254, 252, 248, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(231, 223, 211, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--navy);
+}
+
+.logo-mark {
+  width: 42px; height: 42px;
+  background: var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+}
+.logo-mark::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.logo-text { display: flex; flex-direction: column; line-height: 1; }
+.logo-text .name { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 600; color: var(--navy); }
+.logo-text .tagline { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-top: 4px; }
+
+.nav-links { display: flex; gap: 36px; align-items: center; }
+.nav-links a {
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.3s;
+  position: relative;
+}
+.nav-links a:hover { color: var(--teal); }
+
+.cta-btn {
+  background: var(--navy);
+  color: var(--ivory);
+  padding: 12px 24px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+  border: 1px solid var(--navy);
+}
+.cta-btn:hover { background: var(--teal); border-color: var(--teal); transform: translateY(-1px); }
+
+.cta-btn.outline { background: transparent; color: var(--navy); }
+.cta-btn.outline:hover { background: var(--navy); color: var(--ivory); }
+
+.mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
+
+/* ---------- HERO ---------- */
+.hero {
+  padding: 140px 5% 80px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(28, 169, 138, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 10% 80%, rgba(201, 162, 74, 0.06) 0%, transparent 40%),
+    var(--ivory);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    radial-gradient(circle, rgba(11, 37, 69, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+}
+
+.hero-content { position: relative; z-index: 2; }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+  background: var(--mint);
+  border: 1px solid rgba(19, 133, 107, 0.15);
+  border-radius: 100px;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+.eyebrow .dot { width: 6px; height: 6px; background: var(--teal); border-radius: 50%; animation: pulse 2s infinite; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(44px, 6vw, 78px);
+  font-weight: 500;
+  line-height: 1.02;
+  color: var(--navy);
+  letter-spacing: -0.025em;
+  margin-bottom: 24px;
+}
+.hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--teal);
+  font-variation-settings: "opsz" 144;
+}
+
+.hero p.lead {
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 36px;
+  max-width: 520px;
+  line-height: 1.65;
+}
+
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+
+.trust-row {
+  display: flex;
+  gap: 36px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+.trust-item .num {
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+  color: var(--navy);
+  font-weight: 600;
+  line-height: 1;
+}
+.trust-item .label { font-size: 12px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 6px; }
+
+/* Hero visual */
+.hero-visual { position: relative; height: 560px; }
+
+.hero-card {
+  position: absolute;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(11, 37, 69, 0.08), 0 1px 0 rgba(11, 37, 69, 0.04);
+  overflow: hidden;
+}
+
+.card-main {
+  top: 0; right: 0;
+  width: 78%; height: 70%;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+  color: var(--ivory);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-main::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -30%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(28, 169, 138, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.tooth-svg {
+  width: 80px; height: 80px;
+  color: var(--gold);
+  position: relative;
+  z-index: 2;
+}
+
+.card-main h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+}
+.card-main p { opacity: 0.75; font-size: 14px; position: relative; z-index: 2; margin-top: 8px; }
+
+.card-badge {
+  bottom: 40px; left: 0;
+  width: 240px;
+  padding: 20px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.badge-icon {
+  width: 44px; height: 44px;
+  background: var(--mint);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+.card-badge .lbl { font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+.card-badge .val { font-family: 'Fraunces', serif; font-size: 16px; color: var(--navy); font-weight: 600; margin-top: 2px; }
+
+.card-stars {
+  bottom: 10px; right: 30px;
+  background: var(--gold);
+  color: var(--navy-deep);
+  padding: 14px 20px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 10px 30px rgba(201, 162, 74, 0.3);
+}
+
+/* ---------- SECTION STYLES ---------- */
+section { padding: 100px 5%; position: relative; }
+
+.section-label {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.section-label::before { content: '— '; color: var(--gold); }
+
+.section-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(36px, 4.5vw, 54px);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  max-width: 700px;
+}
+.section-title em { font-style: italic; color: var(--teal); font-weight: 400; }
+
+.section-sub { font-size: 17px; color: var(--muted); max-width: 600px; margin-bottom: 64px; }
+
+/* ---------- SERVICES ---------- */
+.services { background: var(--cream); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.service {
+  background: var(--ivory);
+  padding: 44px 36px;
+  transition: all 0.4s;
+  cursor: pointer;
+  position: relative;
+}
+.service:hover {
+  background: white;
+  transform: translateY(-2px);
+}
+
+.service-num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--gold);
+  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+}
+
+.service-icon {
+  width: 52px; height: 52px;
+  margin-bottom: 24px;
+  color: var(--teal);
+}
+
+.service h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.service p { font-size: 15px; color: var(--muted); line-height: 1.6; }
+
+.service-arrow {
+  margin-top: 24px;
+  color: var(--teal);
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.3s;
+}
+.service:hover .service-arrow { gap: 12px; }
+
+/* ---------- ABOUT ---------- */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-visual {
+  position: relative;
+  height: 580px;
+}
+
+.about-img {
+  position: absolute;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--mint) 0%, #cce9df 100%);
+  box-shadow: 0 20px 60px rgba(11, 37, 69, 0.1);
+}
+
+.about-img.main {
+  inset: 0 0 80px 80px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.about-img.main::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1), transparent 70%);
+}
+
+.about-svg-illust {
+  width: 70%;
+  color: rgba(255,255,255,0.9);
+  position: relative;
+  z-index: 2;
+}
+
+.about-img.accent {
+  bottom: 0; left: 0;
+  width: 240px; height: 240px;
+  background: var(--gold);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--navy-deep);
+}
+.about-img.accent .year { font-family: 'Fraunces', serif; font-size: 64px; font-weight: 600; line-height: 1; }
+.about-img.accent .caption { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }
+
+.about-features {
+  list-style: none;
+  margin: 32px 0 40px;
+  display: grid;
+  gap: 16px;
+}
+.about-features li {
+  display: flex;
+  align-items: start;
+  gap: 14px;
+  font-size: 16px;
+  color: var(--ink);
+}
+.check {
+  width: 22px; height: 22px;
+  background: var(--mint);
+  color: var(--teal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ---------- TESTIMONIAL ---------- */
+.testimonial {
+  background: var(--navy);
+  color: var(--ivory);
+  text-align: center;
+  padding: 120px 5%;
+  position: relative;
+  overflow: hidden;
+}
+.testimonial::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.quote-mark {
+  font-family: 'Fraunces', serif;
+  font-size: 120px;
+  color: var(--gold);
+  line-height: 0.8;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.testimonial-text {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  letter-spacing: -0.01em;
+  position: relative;
+  z-index: 2;
+}
+.testimonial-text em { font-style: italic; color: var(--teal-bright); }
+
+.testimonial-author { position: relative; z-index: 2; }
+.testimonial-author .name { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 500; }
+.testimonial-author .role { font-size: 13px; opacity: 0.6; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+
+.star-row { color: var(--gold); margin-bottom: 32px; position: relative; z-index: 2; letter-spacing: 4px; }
+
+/* ---------- CONTACT ---------- */
+.contact { background: var(--cream); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-info h2 { margin-bottom: 24px; }
+
+.contact-detail {
+  display: flex;
+  gap: 20px;
+  align-items: start;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+.contact-detail:last-child { border-bottom: none; }
+
+.contact-icon {
+  width: 48px; height: 48px;
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
+.contact-detail .lbl { font-size: 11px; color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 6px; }
+.contact-detail .val { font-family: 'Fraunces', serif; font-size: 18px; color: var(--navy); font-weight: 500; line-height: 1.4; }
+.contact-detail .val a { color: var(--navy); text-decoration: none; }
+.contact-detail .val a:hover { color: var(--teal); }
+
+.hours-list { display: grid; gap: 8px; margin-top: 8px; }
+.hours-list .row { display: flex; justify-content: space-between; font-size: 14px; color: var(--ink); }
+.hours-list .row span:last-child { color: var(--teal); font-weight: 500; }
+
+/* Form */
+.contact-form {
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  padding: 40px;
+  border-radius: 20px;
+}
+.contact-form h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  color: var(--navy);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.contact-form .sub { color: var(--muted); font-size: 14px; margin-bottom: 28px; }
+
+.form-group { margin-bottom: 18px; }
+.form-group label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--cream);
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--ink);
+  transition: all 0.3s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+  background: white;
+}
+.form-group textarea { resize: vertical; min-height: 100px; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.submit-btn {
+  background: var(--navy);
+  color: var(--ivory);
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 8px;
+  letter-spacing: 0.02em;
+}
+.submit-btn:hover { background: var(--teal); }
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: var(--navy-deep);
+  color: rgba(255,255,255,0.6);
+  padding: 80px 5% 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.footer-brand .logo-text .name { color: white; }
+.footer-brand .logo-mark { background: var(--gold); color: var(--navy-deep); }
+.footer-brand p {
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.footer-col h4 {
+  font-family: 'Fraunces', serif;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.footer-col ul { list-style: none; display: grid; gap: 10px; }
+.footer-col a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; transition: color 0.3s; }
+.footer-col a:hover { color: var(--teal-bright); }
+
+.footer-bottom {
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .mobile-toggle { display: block; }
+  .hero { grid-template-columns: 1fr; padding-top: 120px; }
+  .hero-visual { height: 400px; }
+  .about { grid-template-columns: 1fr; }
+  .about-visual { height: 420px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .trust-row { flex-wrap: wrap; gap: 24px; }
+  .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 500px) {
+  section { padding: 70px 5%; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .contact-form { padding: 28px 20px; }
+}
+
+/* ---------- ANIMATIONS ---------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s forwards;
+}
+.fade-in.d1 { animation-delay: 0.1s; }
+.fade-in.d2 { animation-delay: 0.25s; }
+.fade-in.d3 { animation-delay: 0.4s; }
+.fade-in.d4 { animation-delay: 0.55s; }
+.fade-in.d5 { animation-delay: 0.7s; }
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-mark">S</div>
+    <div class="logo-text">
+      <span class="name">Sethi Dental Care</span>
+      <span class="tagline">Est. Madangir</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:+919811779157" class="cta-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Book Now
+    </a>
+  </div>
+  <button class="mobile-toggle" aria-label="Menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-content">
+    <span class="eyebrow fade-in d1"><span class="dot"></span> 52 Years in Healthcare · Open 7 Days</span>
+    <h1 class="fade-in d2">Your smile,<br><em>our craft.</em></h1>
+    <p class="lead fade-in d3">Sethi Dental Care Center delivers trusted, gentle dental care in the heart of Madangir, New Delhi. Family dentistry, cosmetic work, and specialist treatments — all under one roof.</p>
+    <div class="hero-actions fade-in d4">
+      <a href="#contact" class="cta-btn">Book Appointment
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="tel:+919811779157" class="cta-btn outline">Call +91 98117 79157</a>
+    </div>
+    <div class="trust-row fade-in d5">
+      <div class="trust-item"><div class="num">52<span style="font-size:0.6em">yrs</span></div><div class="label">In Healthcare</div></div>
+      <div class="trust-item"><div class="num">7 Days</div><div class="label">Open Weekly</div></div>
+      <div class="trust-item"><div class="num">12hr</div><div class="label">Daily Hours</div></div>
+      <div class="trust-item"><div class="num">All</div><div class="label">Specialties</div></div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-card card-main fade-in d3">
+      <svg class="tooth-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 12 C30 12, 22 28, 22 44 C22 56, 26 66, 30 74 C33 80, 35 88, 38 88 C42 88, 42 78, 45 74 C47 71, 53 71, 55 74 C58 78, 58 88, 62 88 C65 88, 67 80, 70 74 C74 66, 78 56, 78 44 C78 28, 70 12, 50 12 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M36 30 C42 26, 50 25, 58 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+      </svg>
+      <div>
+        <h3>Comprehensive dental care,<br>delivered with care.</h3>
+        <p>From routine cleanings to advanced cosmetic dentistry, our experienced team is here for every smile in your family.</p>
+      </div>
+    </div>
+
+    <div class="hero-card card-badge fade-in d4">
+      <div class="badge-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/><polyline points="9 12 11 14 15 10"/></svg>
+      </div>
+      <div>
+        <div class="lbl">Verified by</div>
+        <div class="val">Google Business</div>
+      </div>
+    </div>
+
+    <div class="hero-card card-stars fade-in d5">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      Trusted locally
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="reveal">
+    <span class="section-label">What we do</span>
+    <h2 class="section-title">A full spectrum of <em>dental expertise,</em> under one roof.</h2>
+    <p class="section-sub">From preventive checkups to advanced restorations, every treatment at Sethi Dental is guided by care, precision, and your long-term oral health.</p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service reveal">
+      <div class="service-num">01 / Preventive</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 6 5 6 9c0 3 1 5 2 7 1 2 1 4 2 4 1.5 0 1.5-2 2-2s.5 2 2 2c1 0 1-2 2-4 1-2 2-4 2-7 0-4-2-7-6-7z"/><path d="M9 8c1-1 2-1 3-1s2 0 3 1"/></svg>
+      <h3>General &amp; Preventive Care</h3>
+      <p>Cleanings, checkups, fillings, and fluoride treatments to keep your smile healthy and bright for life.</p>
+      <span class="service-arrow">Learn more →</span>
+    </div>
+
+    <div class="service reveal">
+      <div class="service-num">02 / Restorative</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+      <h3>Root Canal &amp; Crowns</h3>
+      <p>Painless RCT procedures and durable crowns &amp; bridges to restore damaged teeth to full function and beauty.</p>
+      <span class="service-arrow">Learn more →</span>
+    </div>
+
+    <div class="service reveal">
+      <div class="service-num">03 / Cosmetic</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8 22 9 17 14 18 21 12 18 6 21 7 14 2 9 9 8 12 2"/></svg>
+      <h3>Cosmetic Dentistry</h3>
+      <p>Teeth whitening, veneers, and smile makeovers designed to give you the confidence of a camera-ready smile.</p>
+      <span class="service-arrow">Learn more →</span>
+    </div>
+
+    <div class="service reveal">
+      <div class="service-num">04 / Orthodontics</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="8" rx="2"/><line x1="7" y1="8" x2="7" y2="16"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="17" y1="8" x2="17" y2="16"/></svg>
+      <h3>Braces &amp; Aligners</h3>
+      <p>Traditional braces and modern clear aligners to straighten teeth and align your bite — for kids, teens, and adults.</p>
+      <span class="service-arrow">Learn more →</span>
+    </div>
+
+    <div class="service reveal">
+      <div class="service-num">05 / Surgical</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="4"/></svg>
+      <h3>Implants &amp; Surgery</h3>
+      <p>Dental implants, extractions, and oral surgery performed with precision and care for lasting results.</p>
+      <span class="service-arrow">Learn more →</span>
+    </div>
+
+    <div class="service reveal">
+      <div class="service-num">06 / Family</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <h3>Pediatric &amp; Family Care</h3>
+      <p>Gentle dentistry for children, teens, and adults — creating positive dental experiences from the very first visit.</p>
+      <span class="service-arrow">Learn more →</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="about">
+    <div class="about-visual reveal">
+      <div class="about-img main">
+        <svg class="about-svg-illust" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="80" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+          <circle cx="100" cy="100" r="60" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+          <path d="M100 40 C70 40, 58 64, 58 88 C58 106, 64 120, 70 132 C74 141, 76 152, 82 152 C88 152, 88 138, 92 132 C95 128, 105 128, 108 132 C112 138, 112 152, 118 152 C124 152, 126 141, 130 132 C136 120, 142 106, 142 88 C142 64, 130 40, 100 40 Z" fill="currentColor" opacity="0.95"/>
+          <path d="M78 68 C85 62, 95 60, 108 64" stroke="#0b2545" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+        </svg>
+      </div>
+      <div class="about-img accent">
+        <div class="year">7<span style="color:var(--navy);font-size:28px;">days</span></div>
+        <div class="caption">Open every<br>day of the week</div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <span class="section-label">About the clinic</span>
+      <h2 class="section-title">Where tradition meets <em>modern dentistry.</em></h2>
+      <p style="color: var(--muted); font-size: 17px; line-height: 1.7;">Located in JJ Colony, Madangir, Sethi Dental Care Center carries forward a family legacy of <strong style="color: var(--ink); font-weight: 600;">52 years in healthcare</strong> — five decades of experience distilled into a neighborhood clinic where patients return not just for quality treatment, but for the familiar faces and compassionate care they've come to trust.</p>
+      
+      <ul class="about-features">
+        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Experienced team led by qualified dental professionals</li>
+        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Sterilized equipment and modern infection control protocols</li>
+        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Transparent pricing with treatment plans explained upfront</li>
+        <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Walk-ins welcome · Appointments recommended</li>
+      </ul>
+
+      <a href="#contact" class="cta-btn">Schedule a Visit
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIAL ============ -->
+<section class="testimonial" id="reviews">
+  <div class="star-row reveal">★ ★ ★ ★ ★</div>
+  <div class="quote-mark">"</div>
+  <p class="testimonial-text reveal">Trust me, one of my <em>best experiences</em> I have ever had. Dr. Ayushi is so polite and helpful, and the staff is dedicated and respectful. <em>You must come here.</em></p>
+  <div class="testimonial-author reveal">
+    <div class="name">Verified Patient</div>
+    <div class="role">Google Review · 5 Stars</div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <span class="section-label">Visit us</span>
+      <h2 class="section-title">Come in for <em>a consultation.</em></h2>
+      <p style="color: var(--muted); margin-bottom: 20px;">We're right here in Madangir, ready to welcome you. Book ahead or walk in — we'll take care of the rest.</p>
+
+      <div class="contact-detail">
+        <div class="contact-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="lbl">Address</div>
+          <div class="val">39, 1316, Gali Number 38<br>DDA Flats, JJ Colony, Sector 4<br>Madangir, New Delhi, Delhi 110062</div>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="lbl">Call / WhatsApp</div>
+          <div class="val"><a href="tel:+919811779157">+91 98117 79157</a></div>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="lbl">Hours</div>
+          <div class="val">Open All 7 Days</div>
+          <div class="hours-list">
+            <div class="row"><span>Monday — Saturday</span><span>9:00 AM — 9:00 PM</span></div>
+            <div class="row"><span>Sunday</span><span>9:00 AM — 9:00 PM</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form reveal">
+      <h3>Book an appointment</h3>
+      <p class="sub">Fill this out and our front desk will confirm your slot within a few hours.</p>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="+91 XXXXX XXXXX">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select>
+          <option>General Checkup &amp; Cleaning</option>
+          <option>Root Canal Treatment</option>
+          <option>Crown / Bridge / Filling</option>
+          <option>Braces / Aligners Consultation</option>
+          <option>Teeth Whitening / Cosmetic</option>
+          <option>Dental Implant</option>
+          <option>Pediatric Dentistry</option>
+          <option>Emergency — I'm in pain</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Preferred Day</label>
+        <input type="date">
+      </div>
+
+      <div class="form-group">
+        <label>Additional Notes</label>
+        <textarea placeholder="Tell us a bit about what's bothering you (optional)"></textarea>
+      </div>
+
+      <button class="submit-btn" onclick="alert('Thanks! We would have received your request — please connect this form to your booking system.'); return false;">
+        Request Appointment →
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        <div class="logo-mark">S</div>
+        <div class="logo-text">
+          <span class="name">Sethi Dental Care</span>
+          <span class="tagline" style="color: var(--gold);">Madangir · Delhi</span>
+        </div>
+      </a>
+      <p>Trusted dental care for the whole family, right in your neighborhood. Open every day, 9 AM to 9 PM.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">General Dentistry</a></li>
+        <li><a href="#services">Root Canal &amp; Crowns</a></li>
+        <li><a href="#services">Cosmetic</a></li>
+        <li><a href="#services">Braces &amp; Aligners</a></li>
+        <li><a href="#services">Implants</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Clinic</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Book Appointment</a></li>
+        <li><a href="https://maps.google.com/?q=Sethi+Dental+Care+Center+Madangir">Directions</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+919811779157">+91 98117 79157</a></li>
+        <li><a href="https://wa.me/919811779157">WhatsApp Us</a></li>
+        <li style="opacity: 0.7;">Madangir, New Delhi<br>Delhi 110062</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Sethi Dental Care Center. All rights reserved.</div>
+    <div>Made with care · <a href="#" style="color: var(--teal-bright); text-decoration: none;">Privacy</a> · <a href="#" style="color: var(--teal-bright); text-decoration: none;">Terms</a></div>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
