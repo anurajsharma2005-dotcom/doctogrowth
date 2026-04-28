@@ -77,10 +77,17 @@
     font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.88rem;
     border: none; border-radius: 100px; cursor: pointer; text-decoration: none;
     transition: transform 0.2s, box-shadow 0.3s; letter-spacing: -0.01em;
+    box-shadow: 0 0 24px var(--accent-glow), 0 0 48px var(--accent-glow);
+    animation: btnGlow 2.8s ease-in-out infinite;
+  }
+  @keyframes btnGlow {
+    0%, 100% { box-shadow: 0 0 20px var(--accent-glow), 0 0 40px var(--accent-glow); }
+    50% { box-shadow: 0 0 30px var(--accent-glow), 0 0 60px var(--accent-glow), 0 0 90px #4f7eff22; }
   }
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 30px var(--accent-glow), 0 0 60px var(--accent-glow);
+    animation: none;
+    box-shadow: 0 4px 36px var(--accent-glow), 0 0 70px var(--accent-glow);
   }
   .btn-ghost {
     display: inline-flex; align-items: center; gap: 0.5rem;
@@ -238,6 +245,12 @@
     font-style: italic; margin-bottom: 1.25rem;
     border-left: 2px solid var(--border); padding-left: 1rem;
   }
+  .result-summary {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--fg-dim);
+    margin-bottom: 1.25rem;
+  }
   .result-author { display: flex; align-items: center; gap: 0.75rem; }
   .result-avatar {
     width: 38px; height: 38px; border-radius: 50%;
@@ -379,7 +392,7 @@
     100% Performance Guarantee — Results or your money back
   </div>
 
-  <h1>We turn specialist doctors into <span class="highlight">industry authorities</span></h1>
+  <h1>We streamline content for <span class="highlight">doctors and entrepreneurs</span> so they can focus on their work</h1>
   <p class="hero-sub">You record once a month. We handle the editing, copywriting, and distribution across every platform — and guarantee the results.</p>
 
   <div class="hero-ctas">
@@ -424,53 +437,53 @@
 
     <div class="results-grid">
       <div class="result-card sr sr-d1">
-        <div class="result-metric">3<span class="gold">x</span> Enquiries</div>
-        <div class="result-label">Within the first 90 days</div>
-        <blockquote>"I went from maybe 2 enquiries a week to getting messages daily. Patients tell me they found me on Instagram or YouTube — that never happened before."</blockquote>
+        <div class="result-metric">400 → 25.1<span class="blue">K</span></div>
+        <div class="result-label">Instagram followers in 6 months</div>
+        <div class="result-summary">Built the content system around his diabetes-reversal expertise at Redial Clinic — short-form Reels, long-form education, and SEO-driven hooks that translated medical depth into watchable content. Grew @drgaganreversal from around 400 followers to 25.1K in 6 months, with an audience now made up of patients seeking metabolic care and peers in the reversal space.</div>
         <div class="result-author">
-          <div class="result-avatar">SM</div>
+          <div class="result-avatar">GS</div>
           <div class="result-author-info">
-            <strong>Dr. Sarah Mitchell</strong>
-            <span>Consultant Dermatologist · London, UK</span>
+            <strong>Dr. Gagandeep Singh</strong>
+            <span>Diabetes Reversal · Founder, Redial Clinic · New Delhi</span>
           </div>
         </div>
       </div>
 
       <div class="result-card sr sr-d2">
-        <div class="result-metric">12<span class="blue">K</span> Followers</div>
-        <div class="result-label">From 800 in 4 months — all local patients</div>
-        <blockquote>"The content feels medical and trustworthy. My patients actually reference my videos during consultations. It's built a level of trust before they even walk through the door."</blockquote>
+        <div class="result-metric">5<span class="blue">hrs</span> → 30 min</div>
+        <div class="result-label">Weekly time spent on content</div>
+        <blockquote>"I used to lose entire weekends to editing reels and writing captions myself. Now I send raw clips on Monday and the rest is handled — my clinic finally gets my full attention again."</blockquote>
         <div class="result-author">
-          <div class="result-avatar">AK</div>
+          <div class="result-avatar">PV</div>
           <div class="result-author-info">
-            <strong>Dr. Amira Khan</strong>
-            <span>Aesthetic Medicine · Dubai, UAE</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="result-card sr sr-d2">
-        <div class="result-metric">2<span class="blue">hrs</span>/month</div>
-        <div class="result-label">That's all the time it takes from you</div>
-        <blockquote>"I used to spend hours trying to post on social media myself. Now I just talk to a camera once a month and they handle everything. Complete game changer."</blockquote>
-        <div class="result-author">
-          <div class="result-avatar">JC</div>
-          <div class="result-author-info">
-            <strong>Dr. James Clarke</strong>
-            <span>Cardiologist · Manchester, UK</span>
+            <strong>Dr. Priya Verma</strong>
+            <span>Endocrinologist · Mumbai, India</span>
           </div>
         </div>
       </div>
 
       <div class="result-card sr sr-d1">
-        <div class="result-metric">5<span class="gold">x</span> ROI</div>
-        <div class="result-label">Every pound spent returned five-fold</div>
-        <blockquote>"Patients now come in already educated about the procedure — they've watched my YouTube videos. The consultation conversion rate has gone through the roof."</blockquote>
+        <div class="result-metric"><span class="gold">Website + SEO</span></div>
+        <div class="result-label">Full website build + local SEO foundation</div>
+        <div class="result-summary">Designed and built the new Sethi Dental Care website for the Madangir practice — a family dental clinic with 52 years in healthcare — with a clean service hierarchy and a booking flow shaped around how patients actually search for a local dentist. Set up the local SEO foundation, including on-page structure, Google Business optimisation, and review-led trust signals so the clinic surfaces for dentist searches in their area.</div>
         <div class="result-author">
-          <div class="result-avatar">RP</div>
+          <div class="result-avatar">SD</div>
           <div class="result-author-info">
-            <strong>Dr. Raj Patel</strong>
-            <span>Orthopedic Surgeon · Houston, TX</span>
+            <strong>Sethi Dental Care</strong>
+            <span>Family &amp; Cosmetic Dentistry · Madangir, New Delhi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-card sr sr-d2">
+        <div class="result-metric">4<span class="gold">x</span> Output</div>
+        <div class="result-label">Without hiring an in-house team</div>
+        <blockquote>"We were trying to build a content team while also running the business — neither got the attention it needed. Handing the system over meant we could go back to actually building the company."</blockquote>
+        <div class="result-author">
+          <div class="result-avatar">RM</div>
+          <div class="result-author-info">
+            <strong>Rohan Malhotra</strong>
+            <span>Founder, Wellness D2C Brand · Bengaluru</span>
           </div>
         </div>
       </div>
